@@ -1,4 +1,4 @@
-# Watch these videos to be a C# Superhero and have fun :) 
+# Watch these videos to be a C# Superhero and have fun 😎 
 
 
 
