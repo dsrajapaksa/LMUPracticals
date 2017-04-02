@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B103C60B-4DB6-4FC5-B1E0-95209348ABC6}</ProjectGuid>
+    <ProjectGuid>{F7F32BF8-53CA-4564-9363-19A03E3607A9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AreaCalculator</RootNamespace>
-    <AssemblyName>AreaCalculator</AssemblyName>
+    <RootNamespace>Arrays</RootNamespace>
+    <AssemblyName>Arrays</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,9 +50,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AreaCalculator\AreaCalculator.csproj">
+      <Project>{b103c60b-4db6-4fc5-b1e0-95209348abc6}</Project>
+      <Name>AreaCalculator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConditionalLogic\ConditionalLogic.csproj">
       <Project>{1a7aef27-a3df-41f2-b96d-5e80f57b647f}</Project>
       <Name>ConditionalLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iteration\Iteration.csproj">
+      <Project>{b77160f2-2010-486c-99c5-c322816c439d}</Project>
+      <Name>Iteration</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
