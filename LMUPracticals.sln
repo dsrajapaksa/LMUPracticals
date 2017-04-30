@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoListApp", "ToDoListApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallGame", "SmallGame\SmallGame.csproj", "{989D3494-6929-4BDD-ABDD-C6200F82BC4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollections", "DataCollections\DataCollections.csproj", "{C94D2F70-332E-40AE-B9E0-D609E95A6F02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{989D3494-6929-4BDD-ABDD-C6200F82BC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{989D3494-6929-4BDD-ABDD-C6200F82BC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{989D3494-6929-4BDD-ABDD-C6200F82BC4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C94D2F70-332E-40AE-B9E0-D609E95A6F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94D2F70-332E-40AE-B9E0-D609E95A6F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94D2F70-332E-40AE-B9E0-D609E95A6F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94D2F70-332E-40AE-B9E0-D609E95A6F02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
