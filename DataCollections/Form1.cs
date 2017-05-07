@@ -36,9 +36,9 @@ namespace DataCollections
             {
                 cityCombo.Items.Add(p.City);
             }
-            //--2nd Method to populate Objects to combo Box
-          //  cityCombo.DataSource = personsList;
-           // cityCombo.DisplayMember = "City";
+          //--2nd Method to populate Objects to combo Box
+          //cityCombo.DataSource = personsList;
+          //cityCombo.DisplayMember = "City";
         }
 
         List<Person> personsList;
