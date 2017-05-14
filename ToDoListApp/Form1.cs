@@ -24,6 +24,13 @@ namespace ToDoListApp
 
         private void todoList_ItemCheck(object sender, ItemCheckEventArgs e)
         {
+            //  todoList.Items.Remove(todoList.SelectedItem);
+            todoList.Items.Remove(e.Index);
+
+        }
+
+        private void todoList_SelectedIndexChanged(object sender, EventArgs e)
+        {
             todoList.Items.Remove(todoList.SelectedItem);
         }
     }

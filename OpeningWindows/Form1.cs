@@ -46,5 +46,14 @@ namespace OpeningWindows
             }
            
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RegisterForm regf = new RegisterForm();
+            this.Hide();
+            regf.ShowDialog();
+            this.Close();
+
+        }
     }
 }

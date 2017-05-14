@@ -70,7 +70,7 @@
             this.todoList.Name = "todoList";
             this.todoList.Size = new System.Drawing.Size(260, 270);
             this.todoList.TabIndex = 2;
-            this.todoList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.todoList_ItemCheck);
+            this.todoList.SelectedIndexChanged += new System.EventHandler(this.todoList_SelectedIndexChanged);
             // 
             // Form1
             // 
