@@ -16,6 +16,7 @@ namespace Controlers
         public Form1()
         {
             InitializeComponent();
+            toolTip1.SetToolTip(button1, "Something Somethin !");
 
         }
 
@@ -68,15 +69,19 @@ namespace Controlers
         private void button2_Click(object sender, EventArgs e)
         {
             int i = 1;
+
             progressBar1.Value = i * 10;
        
             foreach(int item in arry)
             {
-                if(item == Convert.ToInt16(textBox1.Text))
+
+               
+                if (item == Convert.ToInt16(textBox1.Text))
                 {
+                    
                     MessageBox.Show("Item found !");
-                    progressBar1.Value =  progressBar1.Maximum;
-                    label1.Text = i.ToString();
+                    progressBar1.Value = progressBar1.Maximum;
+                   // label1.Text = i.ToString();
                     break;
                 }
                 progressBar1.Value = i * 10;
