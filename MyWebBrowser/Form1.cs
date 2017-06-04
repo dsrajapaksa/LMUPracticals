@@ -15,6 +15,7 @@ namespace MyWebBrowser
         public Form1()
         {
             InitializeComponent();
+            webBrowser1.Dock = DockStyle.Fill;
             webBrowser1.Url = new Uri("http://google.com");
 
         }
@@ -53,6 +54,11 @@ namespace MyWebBrowser
             {
                 webBrowser1.GoBack();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

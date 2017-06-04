@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Threads\Threads.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebBrowser", "MyWebBrowser\MyWebBrowser.csproj", "{8E6B1881-A321-42EE-A9BF-62601F4735A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreOnUI", "MoreOnUI\MoreOnUI.csproj", "{F4EAE466-B4FB-4440-9B2F-B6BA46A52026}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{8E6B1881-A321-42EE-A9BF-62601F4735A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E6B1881-A321-42EE-A9BF-62601F4735A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E6B1881-A321-42EE-A9BF-62601F4735A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EAE466-B4FB-4440-9B2F-B6BA46A52026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EAE466-B4FB-4440-9B2F-B6BA46A52026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EAE466-B4FB-4440-9B2F-B6BA46A52026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EAE466-B4FB-4440-9B2F-B6BA46A52026}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
