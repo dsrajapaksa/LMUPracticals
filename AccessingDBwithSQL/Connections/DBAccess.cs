@@ -9,7 +9,11 @@ using System.Data;
 namespace AccessingDBwithSQL.Connections
 {
     public static class DBAccess
+
     {
+        /// <summary>
+        /// 
+        /// </summary>
         static SqlCommand cmd;
         static SqlDataAdapter adapt;
         static SqlConnection sqlCon;
