@@ -298,7 +298,7 @@
             this.employeeDataGridView.DataSource = this.employeeBindingSource;
             this.employeeDataGridView.Location = new System.Drawing.Point(12, 12);
             this.employeeDataGridView.Name = "employeeDataGridView";
-            this.employeeDataGridView.Size = new System.Drawing.Size(941, 248);
+            this.employeeDataGridView.Size = new System.Drawing.Size(947, 235);
             this.employeeDataGridView.TabIndex = 21;
             // 
             // dataGridViewTextBoxColumn1
@@ -359,7 +359,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 693);
+            this.ClientSize = new System.Drawing.Size(1054, 555);
             this.Controls.Add(this.employeeDataGridView);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
