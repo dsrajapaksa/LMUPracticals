@@ -62,6 +62,87 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // e_idLabel
+            // 
+            e_idLabel.AutoSize = true;
+            e_idLabel.Location = new System.Drawing.Point(34, 304);
+            e_idLabel.Name = "e_idLabel";
+            e_idLabel.Size = new System.Drawing.Size(27, 13);
+            e_idLabel.TabIndex = 22;
+            e_idLabel.Text = "e id:";
+            // 
+            // dept_idLabel
+            // 
+            dept_idLabel.AutoSize = true;
+            dept_idLabel.Location = new System.Drawing.Point(34, 330);
+            dept_idLabel.Name = "dept_idLabel";
+            dept_idLabel.Size = new System.Drawing.Size(42, 13);
+            dept_idLabel.TabIndex = 24;
+            dept_idLabel.Text = "dept id:";
+            // 
+            // firstNameLabel
+            // 
+            firstNameLabel.AutoSize = true;
+            firstNameLabel.Location = new System.Drawing.Point(34, 356);
+            firstNameLabel.Name = "firstNameLabel";
+            firstNameLabel.Size = new System.Drawing.Size(60, 13);
+            firstNameLabel.TabIndex = 26;
+            firstNameLabel.Text = "First Name:";
+            // 
+            // lastNameLabel
+            // 
+            lastNameLabel.AutoSize = true;
+            lastNameLabel.Location = new System.Drawing.Point(34, 382);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new System.Drawing.Size(61, 13);
+            lastNameLabel.TabIndex = 28;
+            lastNameLabel.Text = "Last Name:";
+            // 
+            // sexLabel
+            // 
+            sexLabel.AutoSize = true;
+            sexLabel.Location = new System.Drawing.Point(34, 408);
+            sexLabel.Name = "sexLabel";
+            sexLabel.Size = new System.Drawing.Size(28, 13);
+            sexLabel.TabIndex = 30;
+            sexLabel.Text = "Sex:";
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Location = new System.Drawing.Point(34, 434);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(48, 13);
+            addressLabel.TabIndex = 32;
+            addressLabel.Text = "Address:";
+            // 
+            // ageLabel
+            // 
+            ageLabel.AutoSize = true;
+            ageLabel.Location = new System.Drawing.Point(34, 460);
+            ageLabel.Name = "ageLabel";
+            ageLabel.Size = new System.Drawing.Size(29, 13);
+            ageLabel.TabIndex = 34;
+            ageLabel.Text = "Age:";
+            // 
+            // salaryLabel
+            // 
+            salaryLabel.AutoSize = true;
+            salaryLabel.Location = new System.Drawing.Point(34, 486);
+            salaryLabel.Name = "salaryLabel";
+            salaryLabel.Size = new System.Drawing.Size(39, 13);
+            salaryLabel.TabIndex = 36;
+            salaryLabel.Text = "Salary:";
+            // 
+            // dateOFJoinLabel
+            // 
+            dateOFJoinLabel.AutoSize = true;
+            dateOFJoinLabel.Location = new System.Drawing.Point(34, 513);
+            dateOFJoinLabel.Name = "dateOFJoinLabel";
+            dateOFJoinLabel.Size = new System.Drawing.Size(69, 13);
+            dateOFJoinLabel.TabIndex = 38;
+            dateOFJoinLabel.Text = "Date OFJoin:";
+            // 
             // employeeDataGridView
             // 
             this.employeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -96,15 +177,7 @@
             this.button1.TabIndex = 40;
             this.button1.Text = "Add New";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // e_idLabel
-            // 
-            e_idLabel.AutoSize = true;
-            e_idLabel.Location = new System.Drawing.Point(34, 304);
-            e_idLabel.Name = "e_idLabel";
-            e_idLabel.Size = new System.Drawing.Size(27, 13);
-            e_idLabel.TabIndex = 22;
-            e_idLabel.Text = "e id:";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // e_idTextBox
             // 
@@ -113,30 +186,12 @@
             this.e_idTextBox.Size = new System.Drawing.Size(200, 20);
             this.e_idTextBox.TabIndex = 23;
             // 
-            // dept_idLabel
-            // 
-            dept_idLabel.AutoSize = true;
-            dept_idLabel.Location = new System.Drawing.Point(34, 330);
-            dept_idLabel.Name = "dept_idLabel";
-            dept_idLabel.Size = new System.Drawing.Size(42, 13);
-            dept_idLabel.TabIndex = 24;
-            dept_idLabel.Text = "dept id:";
-            // 
             // dept_idTextBox
             // 
             this.dept_idTextBox.Location = new System.Drawing.Point(109, 327);
             this.dept_idTextBox.Name = "dept_idTextBox";
             this.dept_idTextBox.Size = new System.Drawing.Size(200, 20);
             this.dept_idTextBox.TabIndex = 25;
-            // 
-            // firstNameLabel
-            // 
-            firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new System.Drawing.Point(34, 356);
-            firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(60, 13);
-            firstNameLabel.TabIndex = 26;
-            firstNameLabel.Text = "First Name:";
             // 
             // firstNameTextBox
             // 
@@ -145,30 +200,12 @@
             this.firstNameTextBox.Size = new System.Drawing.Size(200, 20);
             this.firstNameTextBox.TabIndex = 27;
             // 
-            // lastNameLabel
-            // 
-            lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new System.Drawing.Point(34, 382);
-            lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(61, 13);
-            lastNameLabel.TabIndex = 28;
-            lastNameLabel.Text = "Last Name:";
-            // 
             // lastNameTextBox
             // 
             this.lastNameTextBox.Location = new System.Drawing.Point(109, 379);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(200, 20);
             this.lastNameTextBox.TabIndex = 29;
-            // 
-            // sexLabel
-            // 
-            sexLabel.AutoSize = true;
-            sexLabel.Location = new System.Drawing.Point(34, 408);
-            sexLabel.Name = "sexLabel";
-            sexLabel.Size = new System.Drawing.Size(28, 13);
-            sexLabel.TabIndex = 30;
-            sexLabel.Text = "Sex:";
             // 
             // sexTextBox
             // 
@@ -177,30 +214,12 @@
             this.sexTextBox.Size = new System.Drawing.Size(200, 20);
             this.sexTextBox.TabIndex = 31;
             // 
-            // addressLabel
-            // 
-            addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(34, 434);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(48, 13);
-            addressLabel.TabIndex = 32;
-            addressLabel.Text = "Address:";
-            // 
             // addressTextBox
             // 
             this.addressTextBox.Location = new System.Drawing.Point(109, 431);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(200, 20);
             this.addressTextBox.TabIndex = 33;
-            // 
-            // ageLabel
-            // 
-            ageLabel.AutoSize = true;
-            ageLabel.Location = new System.Drawing.Point(34, 460);
-            ageLabel.Name = "ageLabel";
-            ageLabel.Size = new System.Drawing.Size(29, 13);
-            ageLabel.TabIndex = 34;
-            ageLabel.Text = "Age:";
             // 
             // ageTextBox
             // 
@@ -209,30 +228,12 @@
             this.ageTextBox.Size = new System.Drawing.Size(200, 20);
             this.ageTextBox.TabIndex = 35;
             // 
-            // salaryLabel
-            // 
-            salaryLabel.AutoSize = true;
-            salaryLabel.Location = new System.Drawing.Point(34, 486);
-            salaryLabel.Name = "salaryLabel";
-            salaryLabel.Size = new System.Drawing.Size(39, 13);
-            salaryLabel.TabIndex = 36;
-            salaryLabel.Text = "Salary:";
-            // 
             // salaryTextBox
             // 
             this.salaryTextBox.Location = new System.Drawing.Point(109, 483);
             this.salaryTextBox.Name = "salaryTextBox";
             this.salaryTextBox.Size = new System.Drawing.Size(200, 20);
             this.salaryTextBox.TabIndex = 37;
-            // 
-            // dateOFJoinLabel
-            // 
-            dateOFJoinLabel.AutoSize = true;
-            dateOFJoinLabel.Location = new System.Drawing.Point(34, 513);
-            dateOFJoinLabel.Name = "dateOFJoinLabel";
-            dateOFJoinLabel.Size = new System.Drawing.Size(69, 13);
-            dateOFJoinLabel.TabIndex = 38;
-            dateOFJoinLabel.Text = "Date OFJoin:";
             // 
             // dateOFJoinDateTimePicker
             // 

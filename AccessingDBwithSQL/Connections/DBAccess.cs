@@ -38,5 +38,33 @@ namespace AccessingDBwithSQL.Connections
             }
         }
 
+
+        public static bool putDataToTable(Student stundetObject)
+        {
+            try
+            {
+                cmd = new SqlCommand
+                       ("INSERT INTO Student(id,fname,lname,address,gender,city,datejoined,age,tel)"+ 
+                       "values(@Id,@Fname,@Lname,@Address,@Gender,@City,@DateJoined,@Age,@Tel )", sqlCon);
+                sqlCon.Open();
+                cmd.Parameters.AddWithValue("@Id", stundetObject.id);
+                cmd.Parameters.AddWithValue("@Fname", stundetObject.fname);
+                cmd.Parameters.AddWithValue("@Lname", stundetObject.lname);
+                cmd.Parameters.AddWithValue("@Address", stundetObject.address);
+                cmd.Parameters.AddWithValue("@Gender", stundetObject.gender);
+                cmd.Parameters.AddWithValue("@City", stundetObject.city);
+                cmd.Parameters.AddWithValue("@DateJoined", stundetObject.datejoined);
+                cmd.Parameters.AddWithValue("@Age", stundetObject.age);
+                cmd.Parameters.AddWithValue("@Tel", stundetObject.phone);
+                cmd.ExecuteNonQuery();
+                sqlCon.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
     }
 }

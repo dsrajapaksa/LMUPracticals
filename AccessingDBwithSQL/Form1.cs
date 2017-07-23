@@ -31,5 +31,9 @@ namespace AccessingDBwithSQL
             employeeDataGridView.DataSource = DBAccess.getDataTable(selectDataQurary);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
