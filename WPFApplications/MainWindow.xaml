@@ -7,6 +7,7 @@
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="WPFApplications.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <!--Copy this part-->
     <Window.Resources>
         <Style x:Key="SliderRepeatButton" TargetType="RepeatButton">
             <Setter Property="SnapsToDevicePixels" Value="true" />
