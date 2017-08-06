@@ -46,6 +46,7 @@ namespace AccessingDBwithSQL.Connections
                 cmd = new SqlCommand
                        ("INSERT INTO Student(id,fname,lname,address,gender,city,datejoined,age,tel)"+ 
                        "values(@Id,@Fname,@Lname,@Address,@Gender,@City,@DateJoined,@Age,@Tel )", sqlCon);
+
                 sqlCon.Open();
                 cmd.Parameters.AddWithValue("@Id", stundetObject.id);
                 cmd.Parameters.AddWithValue("@Fname", stundetObject.fname);
@@ -57,6 +58,7 @@ namespace AccessingDBwithSQL.Connections
                 cmd.Parameters.AddWithValue("@Age", stundetObject.age);
                 cmd.Parameters.AddWithValue("@Tel", stundetObject.phone);
                 cmd.ExecuteNonQuery();
+
                 sqlCon.Close();
                 return true;
             }
@@ -65,6 +67,7 @@ namespace AccessingDBwithSQL.Connections
                 return false;
             }
         }
+
 
     }
 }
