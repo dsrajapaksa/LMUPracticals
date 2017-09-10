@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
+using System.Reflection;
 
 namespace CurrencyConverter
 {
@@ -41,7 +42,41 @@ namespace CurrencyConverter
 
             _allRates = JsonConvert.DeserializeObject<AllRates>(response);
 
-            textBlock5.Text = _allRates.rates.AED.ToString();
+            
+            //textBlock5.Text = _allRates.rates.AED.ToString();
+        }
+
+        private void Convert_click(object sender, RoutedEventArgs e)
+        {
+            // outPutText.Text = Convert.ToString( Convert.ToDouble(inPutText.Text)  * _allRates.rates.LKR);
+
+            var fromTag = ((ComboBoxItem)fromComboBox.SelectedItem).Tag.ToString();
+
+            var toTag = ((ComboBoxItem)toComboBox.SelectedItem).Tag.ToString();
+
+
+            //This case matches only from USD to ANY
+            switch (toTag)
+            {
+                case "LKR":
+                    resultText.Text = Convert.ToString(Math.Round(Convert.ToDouble(inPutText.Text) * 
+                        Convert.ToDouble(_allRates.rates.LKR), 2)) +" Sri Lankan Rupees";
+                    break;
+
+                case "AED":
+                    resultText.Text = Convert.ToString(Math.Round(Convert.ToDouble(inPutText.Text) * 
+                        Convert.ToDouble(_allRates.rates.AED), 2)) +" Emirates Dirahms";
+                    break;
+
+                case "SGD":
+                    resultText.Text = Convert.ToString(Math.Round(Convert.ToDouble(inPutText.Text) *
+                        Convert.ToDouble(_allRates.rates.SGD),2))+ " Singaporian Dolars" ;
+                    break;
+
+                default:
+                    break;  
+            }
+
         }
     }
 }

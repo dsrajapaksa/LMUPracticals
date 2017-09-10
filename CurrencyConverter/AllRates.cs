@@ -29,31 +29,31 @@ namespace CurrencyConverter
         public float AWG { get; set; }
         public float AZN { get; set; }
         public float BAM { get; set; }
-        public int BBD { get; set; }
+        public float BBD { get; set; }
         public float BDT { get; set; }
         public float BGN { get; set; }
         public float BHD { get; set; }
         public float BIF { get; set; }
-        public int BMD { get; set; }
+        public float BMD { get; set; }
         public float BND { get; set; }
         public float BOB { get; set; }
         public float BRL { get; set; }
-        public int BSD { get; set; }
+        public float BSD { get; set; }
         public float BTC { get; set; }
         public float BTN { get; set; }
         public float BWP { get; set; }
         public float BYN { get; set; }
         public float BZD { get; set; }
         public float CAD { get; set; }
-        public int CDF { get; set; }
+        public float CDF { get; set; }
         public float CHF { get; set; }
         public float CLF { get; set; }
         public float CLP { get; set; }
         public float CNH { get; set; }
         public float CNY { get; set; }
-        public int COP { get; set; }
+        public float COP { get; set; }
         public float CRC { get; set; }
-        public int CUC { get; set; }
+        public float CUC { get; set; }
         public float CUP { get; set; }
         public float CVE { get; set; }
         public float CZK { get; set; }
@@ -86,7 +86,7 @@ namespace CurrencyConverter
         public float IMP { get; set; }
         public float INR { get; set; }
         public float IQD { get; set; }
-        public int IRR { get; set; }
+        public float IRR { get; set; }
         public float ISK { get; set; }
         public float JEP { get; set; }
         public float JMD { get; set; }
@@ -96,12 +96,12 @@ namespace CurrencyConverter
         public float KGS { get; set; }
         public float KHR { get; set; }
         public float KMF { get; set; }
-        public int KPW { get; set; }
+        public float KPW { get; set; }
         public float KRW { get; set; }
         public float KWD { get; set; }
         public float KYD { get; set; }
         public float KZT { get; set; }
-        public int LAK { get; set; }
+        public float LAK { get; set; }
         public float LBP { get; set; }
         public float LKR { get; set; }
         public float LRD { get; set; }
@@ -120,7 +120,7 @@ namespace CurrencyConverter
         public float MWK { get; set; }
         public float MXN { get; set; }
         public float MYR { get; set; }
-        public int MZN { get; set; }
+        public float MZN { get; set; }
         public float NAD { get; set; }
         public float NGN { get; set; }
         public float NIO { get; set; }
@@ -128,7 +128,7 @@ namespace CurrencyConverter
         public float NPR { get; set; }
         public float NZD { get; set; }
         public float OMR { get; set; }
-        public int PAB { get; set; }
+        public float PAB { get; set; }
         public float PEN { get; set; }
         public float PGK { get; set; }
         public float PHP { get; set; }
@@ -153,7 +153,7 @@ namespace CurrencyConverter
         public float SSP { get; set; }
         public float STD { get; set; }
         public float SVC { get; set; }
-        public int SYP { get; set; }
+        public float SYP { get; set; }
         public float SZL { get; set; }
         public float THB { get; set; }
         public float TJS { get; set; }
@@ -166,7 +166,7 @@ namespace CurrencyConverter
         public float TZS { get; set; }
         public float UAH { get; set; }
         public float UGX { get; set; }
-        public int USD { get; set; }
+        public float USD { get; set; }
         public float UYU { get; set; }
         public float UZS { get; set; }
         public float VEF { get; set; }

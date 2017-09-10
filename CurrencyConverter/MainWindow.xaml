@@ -6,19 +6,78 @@
         xmlns:local="clr-namespace:CurrencyConverter"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <TextBlock x:Name="textBlock" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" TextAlignment="Center"><Run Text="Currency Convert"/><InlineUIContainer>
+        <TextBlock x:Name="textBlock" Margin="20,18,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="Segoe UI Light" Foreground="#FF015B9D"><Run Text="Currency Convert"/><InlineUIContainer>
               
             </InlineUIContainer><Run Text="er"/></TextBlock>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,55,0,0" TextWrapping="Wrap" Text="United State" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="20,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
-        <TextBlock x:Name="textBlock2" Margin="0,55,97,0" TextWrapping="Wrap" Text="Sri Lanka" VerticalAlignment="Top" HorizontalAlignment="Right" Width="117" TextAlignment="Center"/>
-        <TextBox x:Name="textBox1" Height="23" Margin="0,76,97,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="110"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="135,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="$ "/>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Right" Margin="0,80,67,0" TextWrapping="Wrap" Text="LKR" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="CONVERT" Margin="185,70,257,0" VerticalAlignment="Top" Height="29"/>
+        <TextBox x:Name="inPutText" HorizontalAlignment="Left" Height="23" Margin="20,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" FontFamily="Segoe UI Emoji" BorderBrush="#FF015B9D"/>
+        <Button x:Name="button" Click="Convert_click" Content="" Margin="0,71,0,0" VerticalAlignment="Top" Height="34" HorizontalAlignment="Right" Width="88" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}">
+            <Button.Background>
+                <ImageBrush ImageSource="Images/convert.PNG" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <ComboBox x:Name="fromComboBox" Margin="150,76,247,0" VerticalAlignment="Top" IsEnabled="True" SelectedIndex="0" BorderBrush="#FF015B9D" Foreground="#FF015B9D">
+            <ComboBoxItem Tag="USD">USD - US Dollar</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="toComboBox" HorizontalAlignment="Right" Margin="0,76,82,0" SelectedIndex="0" VerticalAlignment="Top" Width="145" Foreground="#FF015B9D" BorderBrush="#FF015B9D">
+            <ComboBoxItem Tag="LKR" >LKR - Sri Lankan Rupee</ComboBoxItem>
+            <ComboBoxItem  Tag="AED" >AED - United Arab Emirates Dihrams</ComboBoxItem>
+            <ComboBoxItem  Tag="SGD" >SGD - Singaporian Dollars</ComboBoxItem>
+        </ComboBox>
+        <TextBlock x:Name="resultText" Margin="10,150,10,134" TextWrapping="Wrap"  TextAlignment="Center" FontSize="20" FontFamily="Segoe UI Semibold" Foreground="#FF015B9D"/>
+
+
         <!--<DataGrid x:Name="dataGrid" Margin="10,140,10,10"/>-->
-        <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="TextBlock"/>
+        <!--<TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="TextBlock"/>-->
 
     </Grid>
 </Window>
