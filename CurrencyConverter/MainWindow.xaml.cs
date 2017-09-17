@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
 using System.Reflection;
+using System.IO;
 
 namespace CurrencyConverter
 {
@@ -24,6 +25,7 @@ namespace CurrencyConverter
     public partial class MainWindow : Window
     {
         AllRates _allRates;
+        SingleRate _singleRate;
         const string All_Rates_URL = @"https://openexchangerates.org/api/latest.json?app_id=0a001572f32142a2aeb6bff88293609d";
 
 
@@ -31,6 +33,7 @@ namespace CurrencyConverter
         {
             InitializeComponent();
             _allRates = new AllRates();
+            _singleRate = new SingleRate();
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
@@ -51,7 +54,6 @@ namespace CurrencyConverter
             // outPutText.Text = Convert.ToString( Convert.ToDouble(inPutText.Text)  * _allRates.rates.LKR);
 
             var fromTag = ((ComboBoxItem)fromComboBox.SelectedItem).Tag.ToString();
-
             var toTag = ((ComboBoxItem)toComboBox.SelectedItem).Tag.ToString();
 
 
@@ -60,23 +62,50 @@ namespace CurrencyConverter
             {
                 case "LKR":
                     resultText.Text = Convert.ToString(Math.Round(Convert.ToDouble(inPutText.Text) * 
-                        Convert.ToDouble(_allRates.rates.LKR), 2)) +" Sri Lankan Rupees";
+                        Convert.ToDouble(_allRates.rates.LKR), 2));
                     break;
 
                 case "AED":
                     resultText.Text = Convert.ToString(Math.Round(Convert.ToDouble(inPutText.Text) * 
-                        Convert.ToDouble(_allRates.rates.AED), 2)) +" Emirates Dirahms";
+                        Convert.ToDouble(_allRates.rates.AED), 2));
                     break;
 
                 case "SGD":
                     resultText.Text = Convert.ToString(Math.Round(Convert.ToDouble(inPutText.Text) *
-                        Convert.ToDouble(_allRates.rates.SGD),2))+ " Singaporian Dolars" ;
+                        Convert.ToDouble(_allRates.rates.SGD),2));
                     break;
 
                 default:
                     break;  
             }
 
+
+            }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            _singleRate.Id = 1;
+            _singleRate.rate_From = fromComboBox.Text.ToString();
+            _singleRate.rate_To = toComboBox.Text.ToString();
+            _singleRate.rate = Convert.ToDouble(resultText.Text);
+
+            string fileLocation = @"H:\VISUAL STUDIO\DemosLMU\LMUPracticals\CurrencyConverter\SaveData\";
+
+            string serializedata = JsonConvert.SerializeObject(_singleRate);
+
+            if(File.ReadAllText(fileLocation + "saved_rate.json")=="")
+            {
+                File.AppendAllText(fileLocation + "saved_rate.json", serializedata+",");
+            }
+            else
+            {
+                File.AppendAllText(fileLocation + "saved_rate.json", ","+serializedata);
+            }
+            
+
+
+
+            MessageBox.Show("Data Saved !");
         }
     }
 }
